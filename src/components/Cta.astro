@@ -4,11 +4,12 @@ interface Props { titre?: string; texte?: string }
 const { titre = 'Un projet en tête ?', texte = "Présentez-nous votre situation : nous vous dirons comment nous pouvons vous aider, et si nous ne sommes pas les bons interlocuteurs." } = Astro.props;
 ---
 <section class="section wrap">
-  <div class="cta on-dark">
+  <div class="cta">
+    <img class="cta__photo" src="/images/nuages-2000.webp" srcset="/images/nuages-1000.webp 1000w, /images/nuages-2000.webp 2000w" sizes="(max-width: 1280px) 100vw, 1200px" width="2000" height="1333" alt="" loading="lazy" />
     <div>
       <h2 class="display">{titre}</h2>
       <p>{texte}</p>
     </div>
-    <a class="btn btn--light btn--lg" href="/contact/">Parlons de votre projet <Arrow /></a>
+    <a class="btn btn--primary btn--lg" href="/contact/">Parlons de votre projet <Arrow /></a>
   </div>
 </section>

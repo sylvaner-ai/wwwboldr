@@ -9,7 +9,7 @@ import Harness from '../components/viz/Harness.astro';
 const services = (await getCollection('services')).filter((s) => s.data.cible === 'adoption').sort((a, b) => a.data.ordre - b.data.ordre);
 const cas = (await getCollection('cas')).filter((c) => c.data.cible === 'adoption').sort((a, b) => a.data.ordre - b.data.ordre);
 ---
-<CiblePage titre="Adopter l'IA : infrastructures souveraines, RAG et harnais sécurisés | BoldR" description="Cadrage IA, infrastructures IA souveraines, RAG d'entreprise et harnais de développement sécurisés, conçus par des experts en sécurité." h1="Adoptez l'IA sans perdre la main sur vos données" lead="Vos équipes veulent utiliser l'IA, et vos données ne doivent pas en payer le prix. Nous concevons et construisons avec vous des usages sous contrôle, avec le regard d'experts en cybersécurité.">
+<CiblePage photo="eoliennes" titre="Adopter l'IA : infrastructures souveraines, RAG et harnais sécurisés | BoldR" description="Cadrage IA, infrastructures IA souveraines, RAG d'entreprise et harnais de développement sécurisés, conçus par des experts en sécurité." h1="Adoptez l'IA sans perdre la main sur vos données" lead="Vos équipes veulent utiliser l'IA, et vos données ne doivent pas en payer le prix. Nous concevons et construisons avec vous des usages sous contrôle, avec le regard d'experts en cybersécurité.">
   <Fragment slot="visuel"><Infra /></Fragment>
 
   <section class="section wrap">
@@ -27,9 +27,8 @@ const cas = (await getCollection('cas')).filter((c) => c.data.cible === 'adoptio
   </section>
 
   <section class="section wrap">
-    <div class="section-head section-head--split">
+    <div class="section-head">
       <h2 class="h2">Ce que cela donne en pratique</h2>
-      <p class="lead">Ces exemples sont illustratifs et leurs données sont fictives. Ils montrent le comportement attendu d'un système bien conçu.</p>
     </div>
     <div class="viz-pair">
       <figure class="viz-frame">

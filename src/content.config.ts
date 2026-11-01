@@ -40,6 +40,7 @@ const articles = defineCollection({
     resume: z.string(),
     url: z.string().url(),
     theme: z.enum(['IA', 'Cyber', 'Cyber & IA']),
+    image: z.string(),
     ordre: z.number(),
   }),
 });

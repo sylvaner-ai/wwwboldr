@@ -2,8 +2,8 @@
 import Base from './Base.astro';
 import Arrow from '../components/Arrow.astro';
 import Cta from '../components/Cta.astro';
-interface Props { titre: string; description: string; h1: string; lead: string }
-const { titre, description, h1, lead } = Astro.props;
+interface Props { titre: string; description: string; h1: string; lead: string; photo: string }
+const { titre, description, h1, lead, photo } = Astro.props;
 ---
 <Base titre={titre} description={description}>
   <section class="page-hero wrap">
@@ -13,7 +13,7 @@ const { titre, description, h1, lead } = Astro.props;
         <p class="lead">{lead}</p>
         <a class="btn btn--primary btn--lg" href="/contact/">Parlons de votre projet <Arrow /></a>
       </div>
-      <div class="page-hero__viz"><slot name="visuel" /></div>
+      <div class="page-hero__viz"><img class="page-hero__photo" src={`/images/${photo}-1200.webp`} width="1200" height="800" alt="" fetchpriority="high" /><slot name="visuel" /></div>
     </div>
   </section>
   <slot />

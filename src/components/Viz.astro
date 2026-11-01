@@ -1,12 +1,11 @@
 ---
-interface Props { titre: string; dark?: boolean; note?: string }
-const { titre, dark = false, note = 'Exemple illustratif, données fictives' } = Astro.props;
+interface Props { titre: string }
+const { titre } = Astro.props;
 ---
-<div class:list={['viz', { 'viz--dark on-dark': dark }]}>
+<div class="viz">
   <div class="viz__head">
     <span class="viz__title">{titre}</span>
     <slot name="head" />
   </div>
   <div class="viz__body"><slot /></div>
-  <p class="viz__note">{note}</p>
 </div>

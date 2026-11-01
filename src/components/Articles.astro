@@ -11,6 +11,7 @@ const articles = (await getCollection('articles')).sort((a, b) => a.data.ordre -
   <div class="articles">
     {articles.map(({ data }) => (
       <a class="article" href={data.url} rel="noopener" target="_blank">
+        <img class="article__photo" src={`/images/${data.image}-720.webp`} width="720" height="480" alt="" loading="lazy" />
         <h3 class="h3">{data.titre}</h3>
         <p>{data.resume}</p>
         <div class="article__foot"><span class="text-link">Lire sur LinkedIn<span class="sr-only"> (nouvel onglet)</span> <Arrow /></span><span class="tag">{data.theme}</span></div>
