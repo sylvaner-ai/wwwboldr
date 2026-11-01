@@ -20,7 +20,7 @@ Adaptation du système « editorial zinc grid » fourni par le client. Les valeu
 | Snow | `#ffffff` | Fond de page, cartes |
 | Ember | `#ff5a00` | Signal rare uniquement |
 
-**Ember** est réservé à la jambe du R dans le logo, à l'onglet actif du héros, à la sélection du formulaire, à la « Cible » de la cartographie et à l'état « Bloqué » du harnais. Son texte est en Obsidian pour le contraste. Le magenta du système d'origine est retiré.
+**Ember** est réservé à l'onglet actif du héros, à la sélection du formulaire, à la « Cible » de la cartographie et à l'état « Bloqué » du harnais. Son texte est en Obsidian pour le contraste. Le magenta du système d'origine est retiré.
 
 ## Typographie
 Une seule famille : **DM Sans** variable, auto-hébergée. Grands titres en graisse 500, approche resserrée (64 px maximum, interligne 1,12), corps 15 px, introductions 18 px.
@@ -35,10 +35,10 @@ Conteneur de 1200 px, grille de 12 colonnes implicite. Les pages alternent carte
 La richesse visuelle vient d'interfaces fictives codées (`src/components/viz/`) : scorecard, cartographie, pilotage, infrastructure, RAG, harnais. Elles flottent sur les photos dans des panneaux givrés. Leur caractère illustratif est indiqué dans les mentions légales. Aucune ne doit citer de vrai client.
 
 ## Photographie
-Paysages et architectures lumineux, de banque d'images (Unsplash), sans personnes : un ciel pour le héros, une architecture ou une énergie par cible, un lac pour la respiration, des nuages pour l'appel à l'action. Pas de photo d'équipe, qui suggérerait un effectif.
+Paysages et architectures lumineux, de banque d'images (Unsplash), sans personnes : un ciel pour le héros, une architecture ou une énergie par cible, des collines pour la respiration, des nuages pour l'appel à l'action. Pas de photo d'équipe, qui suggérerait un effectif.
 
 ## Logo
-Un R modulaire en trois pièces (fût, panse, jambe) suivi de « boldr » en minuscules, DM Sans 600. La jambe est en Ember. Fichiers : `public/logo.svg`, `public/favicon.svg`.
+« Bold » en DM Sans 400 suivi d'un « R » en 700, avec un point bleu `#1f6feb` en haut à droite du R. Le favicon est un carré noir avec un R blanc et le même point. Fichiers : `public/logo.svg`, `public/favicon.svg`.
 
 ## Mouvement
 Un seul geste signature : dans le héros, l'onglet, le mot rotatif et le visuel changent ensemble toutes les 6 secondes, avec un bouton de pause. Les visuels s'animent une fois à leur entrée dans l'écran. Tout est complet sans JavaScript et sans animation si le visiteur limite les mouvements.
