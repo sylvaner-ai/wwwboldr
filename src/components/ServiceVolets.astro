@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props { services: CollectionEntry<'services'>[] }
+const { services } = Astro.props;
+---
+<div class="services">
+  {services.map(({ data }) => (
+    <article class="service">
+      <div class="service__head">
+        <h3 class="h3">{data.titre}</h3>
+        <p>{data.objectif}</p>
+      </div>
+      <div class="volets">
+        <div class="volet"><span class="tag tag--filled">Cyber</span><p>{data.cyber}</p></div>
+        <div class="volet"><span class="tag tag--filled">IA</span><p>{data.ia}</p></div>
+      </div>
+    </article>
+  ))}
+</div>

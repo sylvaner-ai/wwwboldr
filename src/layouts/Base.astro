@@ -1,0 +1,99 @@
+---
+import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+import Arrow from '../components/Arrow.astro';
+
+interface Props { titre: string; description: string; noindex?: boolean }
+const { titre, description, noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const chemin = Astro.url.pathname;
+const liens = [
+  { href: '/investisseurs/', label: 'Investisseurs' },
+  { href: '/entreprises-du-numerique/', label: 'Entreprises du numérique' },
+  { href: '/adoption-ia/', label: "Adoption de l'IA" },
+  { href: '/a-propos/', label: 'À propos' },
+];
+const organisation = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'BoldR',
+  url: 'https://boldr.fr',
+  email: 'contact@boldr.fr',
+  description: 'Conseil stratégique et expertise en cybersécurité et IA.',
+  address: { '@type': 'PostalAddress', streetAddress: '24 rue de Martignac', postalCode: '75007', addressLocality: 'Paris', addressCountry: 'FR' },
+  sameAs: ['https://www.linkedin.com/company/76911412/'],
+});
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titre}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="BoldR" />
+    <meta property="og:title" content={titre} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <script type="application/ld+json" set:html={organisation} is:inline></script>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="nav">
+      <div class="wrap nav__inner">
+        <a class="logo" href="/" aria-label="BoldR, accueil"><Logo /></a>
+        <nav class="nav__links" aria-label="Navigation principale">
+          {liens.map((l) => <a href={l.href} aria-current={chemin === l.href ? 'page' : undefined}>{l.label}</a>)}
+        </nav>
+        <a class="btn btn--primary nav__cta" href="/contact/">Parlons de votre projet</a>
+        <details class="nav__mobile">
+          <summary>Menu</summary>
+          <nav class="nav__panel" aria-label="Navigation mobile">
+            {liens.map((l) => <a href={l.href} aria-current={chemin === l.href ? 'page' : undefined}>{l.label}</a>)}
+            <a class="btn btn--primary btn--lg" href="/contact/">Parlons de votre projet <Arrow /></a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <slot />
+    </main>
+
+    <footer class="footer wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="logo" href="/" aria-label="BoldR, accueil"><Logo /></a>
+          <p class="footer__tag">Sécurisez vos décisions, maîtrisez votre croissance.</p>
+        </div>
+        <div>
+          <h2>Explorer</h2>
+          <ul>
+            {liens.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Informations</h2>
+          <ul>
+            <li><a href="mailto:contact@boldr.fr">contact@boldr.fr</a></li>
+            <li><a href="https://www.linkedin.com/company/76911412/" rel="noopener" target="_blank">LinkedIn<span class="sr-only"> (nouvel onglet)</span></a></li>
+            <li><a href="/mentions-legales/">Mentions légales</a></li>
+            <li><a href="/confidentialite/">Confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© {new Date().getFullYear()} BoldR. Tous droits réservés.</span>
+        <span>Ce site ne dépose aucun cookie.</span>
+      </div>
+    </footer>
+    <script src="../scripts/site.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+---
+import Viz from '../Viz.astro';
+const lignes = [
+  { l: 'Modèle économique', v: 82, n: 'A' },
+  { l: 'Indicateurs de performance', v: 68, n: 'B' },
+  { l: 'Positionnement', v: 74, n: 'B' },
+  { l: 'Potentiel de croissance', v: 86, n: 'A' },
+  { l: 'Solidité technique', v: 71, n: 'B' },
+  { l: 'Dépendance aux fournisseurs de modèles', v: 38, n: 'C' },
+  { l: "Coûts d'inférence", v: 52, n: 'C' },
+  { l: 'Conformité AI Act', v: 64, n: 'B' },
+];
+---
+<Viz titre="Scorecard de due diligence">
+  <span class="pill pill--light" slot="head">Cible fictive</span>
+  <div class="tile rows">
+    {lignes.map((x, i) => (
+      <div class="score">
+        <span>{x.l}</span>
+        <svg class="score__bar" viewBox="0 0 100 6" preserveAspectRatio="none" aria-hidden="true" data-i={i}><rect width="100" height="6" rx="3" /><rect width={x.v} height="6" rx="3" /></svg>
+        <span class:list={['score__note', { 'score__note--c': x.n === 'C' }]}>{x.n}</span>
+      </div>
+    ))}
+  </div>
+  <div class="tile verdict">
+    <div><b>Thèse confirmée, sous conditions</b><br /><span class="muted">2 points à sécuriser avant signature</span></div>
+    <span class="pill">Avis</span>
+  </div>
+</Viz>

@@ -1,0 +1,19 @@
+---
+import Viz from '../Viz.astro';
+interface Props { suite?: boolean }
+const { suite = false } = Astro.props;
+---
+<Viz titre="Assistant RAG d'entreprise">
+  <span class="pill pill--light" slot="head">Droits vérifiés</span>
+  <p class="bubble" data-step>Quel est le délai de validation d'une commande supérieure à 50 000 € ?</p>
+  <div class="tile answer" data-step data-i="1">
+    La commande doit être validée sous 5 jours ouvrés par la direction financière<sup>1</sup>. Au-delà de 200 000 €, un second niveau de validation s'applique<sup>2</sup>.
+  </div>
+  <div class="sources">
+    <div class="tile source" data-step data-i="2"><b>1. Procédure achats, v4</b><span>Page 12, mise à jour en mars</span></div>
+    <div class="tile source" data-step data-i="3"><b>2. Délégations de pouvoir</b><span>Article 3</span></div>
+    <div class="tile source source--denied" data-step data-i="4"><span>Un document exclu : vos droits ne couvrent pas « Contrats RH »</span><span class="pill pill--light">Exclu</span></div>
+  </div>
+  {suite && <p class="bubble" data-step data-i="5">Qui valide en mon absence ?</p>}
+  {suite && <div class="tile answer" data-step data-i="6">Votre suppléant désigné, dans les mêmes limites de montant<sup>2</sup>.</div>}
+</Viz>

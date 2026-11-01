@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import Cta from '../components/Cta.astro';
+---
+<Base titre="À propos | BoldR" description="BoldR est né d'un constat simple : sur les marchés de la cybersécurité et de l'IA, la réussite appartient à ceux qui prennent les décisions les plus éclairées et les plus rapides.">
+  <section class="page-hero wrap">
+    <div class="page-hero__text">
+      <h1 class="display">Des décisions plus éclairées, et plus rapides</h1>
+      <p class="lead">BoldR est né d'un constat simple : sur les marchés de la cybersécurité et de l'IA, la réussite appartient à ceux qui prennent les décisions les plus éclairées et les plus rapides.</p>
+    </div>
+  </section>
+
+  <div class="breath wrap">
+    <picture>
+      <source media="(max-width: 720px)" srcset="/images/strates-1000.webp" />
+      <img src="/images/strates-2000.webp" width="2000" height="1333" alt="Paroi de roche sombre en couches superposées, veinée de blanc." fetchpriority="high" />
+    </picture>
+  </div>
+
+  <section class="section wrap">
+    <div class="approach">
+      <div class="approach__text">
+        <h2 class="h2">Notre mission</h2>
+        <p class="lead">Forts d'expériences en direction d'entreprises de services, en capital-investissement et en stratégie produit, nous avons créé BoldR pour devenir le partenaire de confiance des dirigeants ambitieux.</p>
+      </div>
+      <ul class="verbs">
+        <li><b>Nous sommes des praticiens.</b><span>Nous avons géré des P&L, lancé des offres, acquis des sociétés et restructuré des opérations.</span></li>
+        <li><b>Nous allons jusqu'au livrable.</b><span>Une cartographie, un avis de due diligence, un centre de services ou une infrastructure : vous repartez avec quelque chose d'utilisable.</span></li>
+        <li><b>Nous savons nous taire.</b><span>Nos missions touchent à des décisions et à des données sensibles. Nous ne citons pas nos clients.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <Cta titre="Parlons de votre décision" />
+</Base>

@@ -1,0 +1,159 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Arrow from '../components/Arrow.astro';
+import Articles from '../components/Articles.astro';
+import Cta from '../components/Cta.astro';
+import CaseCard from '../components/CaseCard.astro';
+import Scorecard from '../components/viz/Scorecard.astro';
+import OpsBoard from '../components/viz/OpsBoard.astro';
+import RagChat from '../components/viz/RagChat.astro';
+import MarketMap from '../components/viz/MarketMap.astro';
+import Infra from '../components/viz/Infra.astro';
+
+const cas = (await getCollection('cas')).filter((c) => c.data.accueil).sort((a, b) => a.data.cible.localeCompare(b.data.cible)).reverse();
+
+const cibles = [
+  { id: 'investisseurs', mot: 'vos investissements', tab: 'Investisseurs', href: '/investisseurs/', tags: ['Analyse de marché', 'Due diligence'], copie: "Une cible à évaluer, un marché à comprendre : un avis étayé sur les risques et le potentiel, pour décider en connaissance de cause." },
+  { id: 'numerique', mot: 'vos offres managées', tab: 'Entreprises du numérique', href: '/entreprises-du-numerique/', tags: ['Diagnostic', 'Think, Design & Build', 'Run & Support'], copie: "Une offre managée à lancer, structurer ou rendre rentable, en cybersécurité comme en IA : du positionnement jusqu'au centre de services." },
+  { id: 'adoption', mot: 'vos projets IA', tab: "Adoption de l'IA", href: '/adoption-ia/', tags: ['Cadrage', 'Infrastructure', 'RAG', 'Harnais'], copie: "Des usages de l'IA à déployer sans perdre la maîtrise de vos données : du cadrage jusqu'à l'infrastructure, conçus par des experts en sécurité." },
+];
+---
+<Base titre="BoldR, conseil stratégique et expertise en cybersécurité et IA" description="BoldR accompagne les investisseurs, les entreprises du numérique et les entreprises qui adoptent l'IA : conseil stratégique et expertise en cybersécurité et IA.">
+  <section class="hero wrap">
+    <div class="hero__top">
+      <h1 class="display">
+        <span class="sr-only">Sécurisez vos investissements, vos offres managées et vos projets IA. Maîtrisez votre croissance.</span>
+        <span aria-hidden="true">Sécurisez <span class="rotor">{cibles.map((c, i) => <span class:list={['rotor__word', { 'is-on': i === 0 }]}>{c.mot}.</span>)}</span><br />Maîtrisez votre croissance.</span>
+      </h1>
+      <div class="hero__side">
+        <p class="lead">Conseil stratégique et expertise en cybersécurité et IA, par des praticiens qui ont dirigé, investi et construit.</p>
+        <a class="btn btn--primary btn--lg" href="/contact/">Parlons de votre projet <Arrow /></a>
+      </div>
+    </div>
+
+    <div class="stage" data-stage>
+      <div class="stage__side">
+        <div class="stage__tabs" role="tablist" aria-label="Nos clients" aria-orientation="vertical">
+          {cibles.map((c, i) => (
+            <button class="stage__tab" type="button" role="tab" id={`tab-${c.id}`} aria-controls={`panel-${c.id}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>{c.tab}</button>
+          ))}
+        </div>
+        <div class="stage__copy">
+          <div class="stage__stack">
+            {cibles.map((c, i) => (
+              <div class="stage__text" data-copy={i} hidden={i !== 0}>
+                <p>{c.copie}</p>
+                <div class="tags">{c.tags.map((t) => <span class="tag">{t}</span>)}</div>
+              </div>
+            ))}
+          </div>
+          <div class="stage__foot">
+            <div class="stage__stack">
+              {cibles.map((c, i) => <span data-copy={i} hidden={i !== 0}><a class="text-link" href={c.href}>Voir l'offre<span class="sr-only"> : {c.tab}</span> <Arrow /></a></span>)}
+            </div>
+            <button class="stage__pause" type="button" data-pause aria-pressed="false" aria-label="Mettre le défilement en pause">
+              <svg data-icon-pause viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><rect x="2" y="1" width="3" height="10" rx="1" /><rect x="7" y="1" width="3" height="10" rx="1" /></svg>
+              <svg data-icon-play hidden viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M3 1.5v9l7.5-4.5z" /></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="stage__panels">
+        <div class="stage__panel" role="tabpanel" id="panel-investisseurs" aria-labelledby="tab-investisseurs"><Scorecard /></div>
+        <div class="stage__panel" role="tabpanel" id="panel-numerique" aria-labelledby="tab-numerique" hidden><OpsBoard /></div>
+        <div class="stage__panel" role="tabpanel" id="panel-adoption" aria-labelledby="tab-adoption" hidden><RagChat suite /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="section-head section-head--split">
+      <h2 class="h2">Trois situations, une même exigence de résultat</h2>
+      <p class="lead">Investir, vendre un service ou adopter l'IA ne pose pas les mêmes questions. Chaque offre part de la décision que vous avez à prendre.</p>
+    </div>
+    <div class="cibles">
+      <a class="cible" href="/investisseurs/">
+        <div class="cible__viz is-compact" aria-hidden="true"><MarketMap /></div>
+        <div class="cible__body">
+          <h3 class="h3">Investisseurs</h3>
+          <p>Évaluez les risques et le potentiel de vos cibles et de vos marchés.</p>
+          <div class="tags"><span class="tag">Analyse de marché</span><span class="tag">Due diligence</span></div>
+          <span class="text-link">Voir l'offre <Arrow /></span>
+        </div>
+      </a>
+      <a class="cible" href="/entreprises-du-numerique/">
+        <div class="cible__viz is-compact" aria-hidden="true"><OpsBoard /></div>
+        <div class="cible__body">
+          <h3 class="h3">Entreprises du numérique</h3>
+          <p>Structurez et optimisez vos services managés pour vous différencier.</p>
+          <div class="tags"><span class="tag">Diagnostic</span><span class="tag">Think, Design & Build</span><span class="tag">Run & Support</span></div>
+          <span class="text-link">Voir l'offre <Arrow /></span>
+        </div>
+      </a>
+      <a class="cible" href="/adoption-ia/">
+        <div class="cible__viz is-compact" aria-hidden="true"><Infra /></div>
+        <div class="cible__body">
+          <h3 class="h3">Entreprises qui adoptent l'IA</h3>
+          <p>Déployez l'IA en gardant la maîtrise de vos données et de vos modèles.</p>
+          <div class="tags"><span class="tag">Cadrage</span><span class="tag">Infrastructure</span><span class="tag">RAG</span><span class="tag">Harnais</span></div>
+          <span class="text-link">Voir l'offre <Arrow /></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="band on-dark">
+      <h2 class="h2">Deux expertises, aussi développées l'une que l'autre</h2>
+      <div class="band__grid">
+        <div class="band__col">
+          <h3>Cybersécurité</h3>
+          <ul class="arrows">
+            {['Analyse du marché et due diligence', 'Offres MSSP : outils, pricing, positionnement', 'Centres de services SOC, CERT et VOC', 'Rentabilité et qualité de service'].map((t) => <li><Arrow /><span>{t}</span></li>)}
+          </ul>
+        </div>
+        <div class="band__col">
+          <h3>Intelligence artificielle</h3>
+          <ul class="arrows">
+            {['Analyse du marché et due diligence', 'AIOps, MLOps et AI Governance', 'Infrastructures IA souveraines', "RAG d'entreprise et harnais de développement sécurisés"].map((t) => <li><Arrow /><span>{t}</span></li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="section-head">
+      <h2 class="h2">Des réalisations, pas seulement des recommandations</h2>
+      <p class="lead">Nous ne citons pas nos clients. Voici deux missions d'expertise en IA, décrites sans les nommer. Nos missions cyber et d'investissement restent confidentielles.</p>
+    </div>
+    <div class="cases">{cas.map((c) => <CaseCard cas={c} />)}</div>
+  </section>
+
+  <div class="breath wrap">
+    <picture>
+      <source media="(max-width: 720px)" srcset="/images/strates-1000.webp" />
+      <img src="/images/strates-2000.webp" width="2000" height="1333" alt="Paroi de roche sombre en couches superposées, veinée de blanc." loading="lazy" decoding="async" />
+    </picture>
+  </div>
+
+  <section class="section wrap">
+    <div class="approach">
+      <div class="approach__text">
+        <h2 class="h2">Des praticiens avant d'être des consultants</h2>
+        <p class="lead">Sur les marchés de la cybersécurité et de l'IA, la réussite appartient à ceux qui prennent les décisions les plus éclairées et les plus rapides. Nous en avons pris de ce type, avec leurs conséquences.</p>
+        <a class="text-link" href="/a-propos/">Notre mission <Arrow /></a>
+      </div>
+      <ul class="verbs">
+        <li><b>Nous avons géré des P&L.</b><span>Nos recommandations tiennent compte de ce qu'elles coûtent et de ce qu'elles rapportent.</span></li>
+        <li><b>Nous avons lancé des offres.</b><span>Nous savons ce qui sépare une offre sur le papier d'une offre qui se vend.</span></li>
+        <li><b>Nous avons acquis des sociétés.</b><span>Nous lisons une cible avec les yeux de celui qui devra vivre avec sa décision.</span></li>
+        <li><b>Nous avons restructuré des opérations.</b><span>Nous intervenons jusqu'à l'organisation, aux processus et aux outils.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <Articles />
+  <Cta />
+</Base>

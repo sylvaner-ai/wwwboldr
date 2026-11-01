@@ -1,0 +1,26 @@
+---
+import Viz from '../Viz.astro';
+const segments = [
+  { s: 'Détection et réponse', a: ['Acteur A', 'Acteur B', 'Acteur C'] },
+  { s: 'Identités', a: ['Acteur D', 'Acteur E'] },
+  { s: 'Services managés', a: ['Acteur F', 'Cible', 'Acteur G'], t: true },
+  { s: 'Modèles', a: ['Acteur H', 'Acteur I'] },
+  { s: 'Infrastructure IA', a: ['Acteur J', 'Acteur K', 'Acteur L'] },
+  { s: 'Applications IA', a: ['Acteur M', 'Acteur N'] },
+];
+---
+<Viz titre="Cartographie de marché">
+  <span class="pill pill--light" slot="head">Cyber et IA</span>
+  <div class="market">
+    {segments.map((c, i) => (
+      <div class="tile market__cell" data-step data-i={i}>
+        <b>{c.s}</b>
+        <div class="dots">{c.a.map((a) => <span class:list={{ 'is-target': a === 'Cible' }}>{a}</span>)}</div>
+      </div>
+    ))}
+  </div>
+  <div class="tile rows">
+    <div class="row"><span>Tendance : consolidation des services managés</span><span class="pill">Forte</span></div>
+    <div class="row"><span>Risque : dépendance à un fournisseur de modèles</span><span class="pill pill--light">Moyen</span></div>
+  </div>
+</Viz>

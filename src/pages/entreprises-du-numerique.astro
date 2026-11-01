@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import CiblePage from '../layouts/CiblePage.astro';
+import ServiceVolets from '../components/ServiceVolets.astro';
+import CaseCard from '../components/CaseCard.astro';
+import Articles from '../components/Articles.astro';
+import OpsBoard from '../components/viz/OpsBoard.astro';
+import Infra from '../components/viz/Infra.astro';
+import RagChat from '../components/viz/RagChat.astro';
+const services = (await getCollection('services')).filter((s) => s.data.cible === 'numerique').sort((a, b) => a.data.ordre - b.data.ordre);
+const cas = (await getCollection('cas')).filter((c) => c.data.cible === 'numerique').sort((a, b) => a.data.ordre - b.data.ordre);
+---
+<CiblePage titre="Entreprises du numérique : services managés cyber et IA | BoldR" description="Diagnostic, conception et optimisation de vos services managés : SOC, CERT, VOC, AIOps, MLOps et AI Governance." h1="Bâtissez une offre managée qui se différencie" lead="La concurrence est féroce. Nous vous aidons à construire et à affiner vos services managés, en cybersécurité comme en IA, pour atteindre l'excellence opérationnelle et gagner des parts de marché.">
+  <Fragment slot="visuel"><OpsBoard /></Fragment>
+
+  <section class="section wrap">
+    <div class="section-head">
+      <h2 class="h2">Du positionnement au centre de services</h2>
+      <p class="lead">Trois services, chacun en cyber et en IA, selon que votre offre est à lancer, à construire ou à redresser.</p>
+    </div>
+    <ServiceVolets services={services} />
+  </section>
+
+  <section class="section wrap">
+    <div class="section-head section-head--split">
+      <h2 class="h2">Nos réalisations</h2>
+      <p class="lead">Deux missions d'expertise pour une entreprise du numérique, décrites sans la nommer. Les schémas sont illustratifs et leurs données fictives.</p>
+    </div>
+    <div class="cases">{cas.map((c) => <CaseCard cas={c} />)}</div>
+    <div class="viz-pair section">
+      <figure class="viz-frame"><Infra /></figure>
+      <figure class="viz-frame"><RagChat /></figure>
+    </div>
+  </section>
+
+  <Articles />
+</CiblePage>

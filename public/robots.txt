@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://boldr.fr/sitemap-index.xml

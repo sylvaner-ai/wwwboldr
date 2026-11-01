@@ -1,0 +1,24 @@
+---
+import Viz from '../Viz.astro';
+---
+<Viz titre="Pilotage d'un centre de services">
+  <span class="pill pill--light" slot="head">SOC et MLOps</span>
+  <div class="kpis">
+    <div class="tile kpi"><b>12 min</b><span>Détection moyenne</span></div>
+    <div class="tile kpi"><b>1 h 40</b><span>Résolution moyenne</span></div>
+    <div class="tile kpi"><b>38 %</b><span>Marge du centre</span></div>
+  </div>
+  <div class="tile chart">
+    <p class="chart__title">Marge du centre, sur 12 mois</p>
+    <svg viewBox="0 0 400 76" preserveAspectRatio="none" aria-hidden="true">
+      <line x1="0" y1="19" x2="400" y2="19" /><line x1="0" y1="38" x2="400" y2="38" /><line x1="0" y1="57" x2="400" y2="57" />
+      <path d="M0 62 C40 58 60 50 90 52 S150 40 180 42 S240 26 270 30 S340 14 400 10" />
+    </svg>
+  </div>
+  <div class="tile rows">
+    <div class="row"><span>Alerte qualifiée, poste de travail</span><span class="pill">Traitée</span></div>
+    <div class="row"><span>Dérive détectée, modèle de scoring</span><span class="pill pill--light">En cours</span></div>
+    <div class="row"><span>Pipeline de réentraînement</span><span class="pill">Conforme</span></div>
+    <div class="row"><span>Revue de gouvernance IA</span><span class="pill pill--light">Planifiée</span></div>
+  </div>
+</Viz>

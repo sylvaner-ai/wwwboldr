@@ -1,0 +1,21 @@
+---
+import Viz from '../Viz.astro';
+const lignes = [
+  { a: 'Lire le code du module de commandes', d: 'Dans le périmètre du projet', p: 'Autorisé', c: '' },
+  { a: 'Lancer les tests', d: 'Dans un environnement isolé', p: 'Autorisé', c: '' },
+  { a: 'Lire le fichier de secrets', d: 'Règle : aucun secret', p: 'Bloqué', c: 'pill--stop' },
+  { a: 'Installer une dépendance', d: 'Hors liste approuvée', p: 'Bloqué', c: 'pill--stop' },
+  { a: 'Pousser sur la branche principale', d: 'Revue par un développeur', p: 'À valider', c: 'pill--dark' },
+];
+---
+<Viz titre="Harnais de développement" dark>
+  <span class="pill" slot="head">Journal</span>
+  <div class="tile rows">
+    {lignes.map((l, i) => (
+      <div class="log" data-step data-i={i}>
+        <div><b>{l.a}</b><span>{l.d}</span></div>
+        <span class:list={['pill', l.c]}>{l.p}</span>
+      </div>
+    ))}
+  </div>
+</Viz>

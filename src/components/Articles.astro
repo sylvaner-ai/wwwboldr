@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import Arrow from './Arrow.astro';
+const articles = (await getCollection('articles')).sort((a, b) => a.data.ordre - b.data.ordre);
+---
+<section class="section wrap">
+  <div class="section-head">
+    <h2 class="h2">Nos dernières publications</h2>
+    <p class="lead">Nos analyses sur la cybersécurité et l'intelligence artificielle, publiées sur LinkedIn.</p>
+  </div>
+  <div class="articles">
+    {articles.map(({ data }) => (
+      <a class="article" href={data.url} rel="noopener" target="_blank">
+        <h3 class="h3">{data.titre}</h3>
+        <p>{data.resume}</p>
+        <div class="article__foot"><span class="text-link">Lire sur LinkedIn<span class="sr-only"> (nouvel onglet)</span> <Arrow /></span><span class="tag">{data.theme}</span></div>
+      </a>
+    ))}
+  </div>
+  <p class="articles-foot"><a class="btn btn--neutral" href="https://www.linkedin.com/company/76911412/posts/?feedView=all" rel="noopener" target="_blank">Voir toutes les publications<span class="sr-only"> (nouvel onglet)</span></a></p>
+</section>

@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props { cas: CollectionEntry<'cas'> }
+const { titre, acteur, contexte, intervention, livre } = Astro.props.cas.data;
+---
+<article class="case">
+  <div>
+    <h3 class="h3">{titre}</h3>
+    <p class="case__who">{acteur}</p>
+  </div>
+  <dl>
+    <div><dt>Contexte</dt><dd>{contexte}</dd></div>
+    <div><dt>Intervention</dt><dd>{intervention}</dd></div>
+    <div><dt>Livré</dt><dd>{livre}</dd></div>
+  </dl>
+</article>

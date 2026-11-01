@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import CiblePage from '../layouts/CiblePage.astro';
+import ServiceVolets from '../components/ServiceVolets.astro';
+import Articles from '../components/Articles.astro';
+import Scorecard from '../components/viz/Scorecard.astro';
+import MarketMap from '../components/viz/MarketMap.astro';
+const services = (await getCollection('services')).filter((s) => s.data.cible === 'investisseurs').sort((a, b) => a.data.ordre - b.data.ordre);
+---
+<CiblePage titre="Investisseurs : analyse de marché et due diligence cyber et IA | BoldR" description="Analyse de marché stratégique et due diligence technologique et commerciale sur les marchés de la cybersécurité et de l'IA." h1="Sécurisez vos décisions d'investissement" lead="La cybersécurité et l'IA évoluent vite, et les discours se ressemblent. Nous vous donnons un avis étayé pour évaluer les risques, identifier les bonnes cibles et défendre votre thèse d'investissement.">
+  <Fragment slot="visuel"><Scorecard /></Fragment>
+
+  <section class="section wrap">
+    <div class="section-head">
+      <h2 class="h2">Deux services, chacun en cyber et en IA</h2>
+      <p class="lead">Notre objectif : transformer l'incertitude en décision d'investissement.</p>
+    </div>
+    <ServiceVolets services={services} />
+  </section>
+
+  <section class="section wrap">
+    <div class="section-head section-head--split">
+      <h2 class="h2">À quoi ressemble un livrable</h2>
+      <p class="lead">Ces exemples sont illustratifs et leurs données sont fictives. Ils montrent la forme de ce que vous recevez.</p>
+    </div>
+    <figure class="viz-frame">
+      <MarketMap />
+      <figcaption><b>Une cartographie de marché</b><span>Les acteurs, les tendances, les risques et les canaux de distribution, sur une seule vue. La scorecard en haut de page montre l'autre forme de livrable : une évaluation critère par critère, jusqu'à un avis clair et aux points à sécuriser.</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="section wrap">
+    <div class="notice on-dark">
+      <h2 class="h2">Missions réalisées sous stricte confidentialité</h2>
+      <p>Une due diligence engage des informations sensibles et des décisions en cours. Nous ne citons donc ni nos clients investisseurs, ni leurs cibles, ni le détail de nos missions. Vous pouvez compter sur la même discrétion.</p>
+    </div>
+  </section>
+
+  <Articles />
+</CiblePage>

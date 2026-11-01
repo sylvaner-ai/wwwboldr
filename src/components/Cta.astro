@@ -1,0 +1,14 @@
+---
+import Arrow from './Arrow.astro';
+interface Props { titre?: string; texte?: string }
+const { titre = 'Un projet en tête ?', texte = "Présentez-nous votre situation : nous vous dirons comment nous pouvons vous aider, et si nous ne sommes pas les bons interlocuteurs." } = Astro.props;
+---
+<section class="section wrap">
+  <div class="cta on-dark">
+    <div>
+      <h2 class="display">{titre}</h2>
+      <p>{texte}</p>
+    </div>
+    <a class="btn btn--light btn--lg" href="/contact/">Parlons de votre projet <Arrow /></a>
+  </div>
+</section>
