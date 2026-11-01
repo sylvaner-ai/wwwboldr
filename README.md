@@ -44,6 +44,12 @@ docker build -t boldr . && docker run --rm -p 8080:80 -e SMTP_USER=contact@boldr
 - En cas d'échec, regarder les logs du conteneur dans Coolify (lignes `[contact]`).
 - Vérifier l'adresse de l'hébergeur dans `src/pages/mentions-legales.astro` par rapport à votre espace client.
 
+## Signature e-mail
+
+`signature/signature-mail.html` reprend le logo et le style du site. Elle est autonome (aucune image) et sa largeur s'adapte aux téléphones.
+
+Pour l'installer : ouvrir le fichier dans un navigateur, tout sélectionner (Cmd+A), copier, puis coller dans les réglages de signature de la messagerie (Webmail Hostinger, Apple Mail, Gmail, Outlook).
+
 ## Modifier le contenu
 
 - Services, réalisations, articles : `src/content/fr/`
