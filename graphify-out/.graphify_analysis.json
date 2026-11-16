@@ -1,6 +1,34 @@
 {
   "communities": {
     "0": [
+      "astro_content",
+      "ref_astro_content",
+      "src_components_arrow",
+      "src_components_articles",
+      "src_components_articles_articles",
+      "src_components_casecard",
+      "src_components_casecard_props",
+      "src_components_servicevolets",
+      "src_components_servicevolets_props",
+      "src_components_viz_infra",
+      "src_components_viz_opsboard",
+      "src_components_viz_ragchat",
+      "src_components_viz_ragchat_props",
+      "src_layouts_ciblepage",
+      "src_layouts_ciblepage_props",
+      "src_pages_adoption_ia",
+      "src_pages_adoption_ia_cas",
+      "src_pages_adoption_ia_services",
+      "src_pages_entreprises_du_numerique",
+      "src_pages_entreprises_du_numerique_cas",
+      "src_pages_entreprises_du_numerique_services",
+      "src_pages_index",
+      "src_pages_index_cas",
+      "src_pages_index_cibles",
+      "src_pages_investisseurs",
+      "src_pages_investisseurs_services"
+    ],
+    "1": [
       "astro_config",
       "astro_config_typographie",
       "package",
@@ -21,7 +49,26 @@
       "ref_fontsource_variable_dm_sans",
       "ref_node_fs"
     ],
-    "1": [
+    "2": [
+      "src_assets_logo",
+      "src_components_cta",
+      "src_components_cta_props",
+      "src_components_logo",
+      "src_layouts_base",
+      "src_layouts_base_canonical",
+      "src_layouts_base_liens",
+      "src_layouts_base_organisation",
+      "src_layouts_base_props",
+      "src_pages_404",
+      "src_pages_a_propos",
+      "src_pages_confidentialite",
+      "src_pages_contact",
+      "src_pages_contact_profils",
+      "src_pages_mentions_legales",
+      "src_pages_merci",
+      "src_styles_global"
+    ],
+    "3": [
       "github_workflows_graphify",
       "github_workflows_graphify_jobs",
       "github_workflows_graphify_jobs_update_graph",
@@ -32,42 +79,7 @@
       "github_workflows_graphify_permissions_contents",
       "github_workflows_graphify_push_branches",
       "github_workflows_graphify_push_paths_ignore",
-      "github_workflows_graphify_steps_name",
-      "github_workflows_graphify_steps_run",
-      "github_workflows_graphify_steps_uses",
-      "github_workflows_graphify_steps_with",
-      "github_workflows_graphify_update_graph_runs_on",
-      "github_workflows_graphify_update_graph_steps",
-      "github_workflows_graphify_with_fetch_depth"
-    ],
-    "2": [
-      "src_assets_logo",
-      "src_components_logo",
-      "src_layouts_base",
-      "src_layouts_base_canonical",
-      "src_layouts_base_liens",
-      "src_layouts_base_organisation",
-      "src_layouts_base_props",
-      "src_pages_404",
-      "src_pages_confidentialite",
-      "src_pages_contact",
-      "src_pages_contact_profils",
-      "src_pages_mentions_legales",
-      "src_pages_merci",
-      "src_styles_global"
-    ],
-    "3": [
-      "src_components_viz",
-      "src_components_viz_infra",
-      "src_components_viz_marketmap",
-      "src_components_viz_marketmap_segments",
-      "src_components_viz_opsboard",
-      "src_components_viz_props",
-      "src_components_viz_scorecard",
-      "src_components_viz_scorecard_lignes",
-      "src_pages_index",
-      "src_pages_index_cas",
-      "src_pages_index_cibles"
+      "github_workflows_graphify_update_graph_runs_on"
     ],
     "4": [
       "composer",
@@ -81,22 +93,24 @@
       "composer_type"
     ],
     "5": [
-      "ref_astro_content",
-      "src_components_articles",
-      "src_components_articles_articles",
-      "src_components_servicevolets",
-      "src_components_servicevolets_props",
-      "src_pages_investisseurs",
-      "src_pages_investisseurs_services"
+      "github_workflows_graphify_env_graphify_force",
+      "github_workflows_graphify_steps_env",
+      "github_workflows_graphify_steps_name",
+      "github_workflows_graphify_steps_run",
+      "github_workflows_graphify_steps_uses",
+      "github_workflows_graphify_steps_with",
+      "github_workflows_graphify_update_graph_steps",
+      "github_workflows_graphify_with_fetch_depth"
     ],
     "6": [
-      "src_components_casecard",
-      "src_components_casecard_props",
+      "src_components_viz",
       "src_components_viz_harness",
       "src_components_viz_harness_lignes",
-      "src_pages_adoption_ia",
-      "src_pages_adoption_ia_cas",
-      "src_pages_adoption_ia_services"
+      "src_components_viz_marketmap",
+      "src_components_viz_marketmap_segments",
+      "src_components_viz_props",
+      "src_components_viz_scorecard",
+      "src_components_viz_scorecard_lignes"
     ],
     "7": [
       "phpmailer_phpmailer_exception",
@@ -107,14 +121,6 @@
       "public_envoi_respond"
     ],
     "8": [
-      "src_components_arrow",
-      "src_components_cta",
-      "src_components_cta_props",
-      "src_layouts_ciblepage",
-      "src_layouts_ciblepage_props",
-      "src_pages_a_propos"
-    ],
-    "9": [
       "src_content_config",
       "src_content_config_articles",
       "src_content_config_cas",
@@ -122,21 +128,14 @@
       "src_content_config_collections",
       "src_content_config_services"
     ],
-    "10": [
+    "9": [
       "ref_astro_tsconfigs_strict",
       "tsconfig",
       "tsconfig_exclude",
       "tsconfig_extends",
       "tsconfig_include"
     ],
-    "11": [
-      "src_components_viz_ragchat",
-      "src_components_viz_ragchat_props",
-      "src_pages_entreprises_du_numerique",
-      "src_pages_entreprises_du_numerique_cas",
-      "src_pages_entreprises_du_numerique_services"
-    ],
-    "12": [
+    "10": [
       "src_scripts_site",
       "src_scripts_site_form",
       "src_scripts_site_menu",
@@ -145,25 +144,23 @@
     ]
   },
   "cohesion": {
-    "0": 0.1286549707602339,
-    "1": 0.11764705882352941,
-    "2": 0.14285714285714285,
-    "3": 0.23636363636363636,
+    "0": 0.15076923076923077,
+    "1": 0.1286549707602339,
+    "2": 0.11764705882352941,
+    "3": 0.18181818181818182,
     "4": 0.2222222222222222,
-    "5": 0.38095238095238093,
-    "6": 0.2857142857142857,
+    "5": 0.25,
+    "6": 0.25,
     "7": 0.3333333333333333,
-    "8": 0.4,
-    "9": 0.3333333333333333,
-    "10": 0.4,
-    "11": 0.4,
-    "12": 0.4
+    "8": 0.3333333333333333,
+    "9": 0.4,
+    "10": 0.4
   },
   "gods": [
     {
       "id": "github_workflows_graphify_update_graph_steps",
       "label": "steps",
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "package_scripts",
@@ -215,8 +212,8 @@
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `astro` connect `Community 0` to `Community 9`?",
-      "why": "High betweenness centrality (0.155) - this node is a cross-community bridge."
+      "question": "Why does `astro` connect `Community 1` to `Community 8`?",
+      "why": "High betweenness centrality (0.150) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
@@ -225,18 +222,18 @@
     },
     {
       "type": "low_cohesion",
-      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.1286549707602339 - nodes in this community are weakly interconnected."
     },
     {
-      "type": "low_cohesion",
-      "question": "Should `Community 1` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected."
+      "type": "bridge_node",
+      "question": "Why does `steps` connect `Community 5` to `Community 3`?",
+      "why": "High betweenness centrality (0.014) - this node is a cross-community bridge."
     },
     {
       "type": "low_cohesion",
       "question": "Should `Community 2` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected."
     }
   ]
 }
