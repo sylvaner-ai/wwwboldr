@@ -4,3 +4,6 @@ dist
 .git
 .impeccable
 *.md
+
+# Graphify knowledge graph (exclude from Coolify/Docker build context)
+graphify-out/
