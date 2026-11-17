@@ -1,213 +1,213 @@
 {
   ".claude/settings.json": {
-    "mtime": 1794899672.3884614,
-    "seen": 1794899676.5935214,
-    "ast_hash": "663ae8066cf5c006afeea7f22d32b4d6",
-    "semantic_hash": "663ae8066cf5c006afeea7f22d32b4d6",
+    "mtime": 1794901500.481704,
+    "seen": 1794901503.9001372,
+    "ast_hash": "3df1490c446b97d527a5d7570197fa87",
+    "semantic_hash": "3df1490c446b97d527a5d7570197fa87",
     "ast_empty": true
   },
   "astro.config.mjs": {
-    "mtime": 1794899672.38904,
-    "seen": 1794899676.5935767,
+    "mtime": 1794901500.482468,
+    "seen": 1794901503.9002023,
     "ast_hash": "b4c5efc7b4bc3c21a911625394c55825",
     "semantic_hash": "b4c5efc7b4bc3c21a911625394c55825"
   },
   "composer.json": {
-    "mtime": 1794899672.38904,
-    "seen": 1794899676.593603,
+    "mtime": 1794901500.482468,
+    "seen": 1794901503.9002373,
     "ast_hash": "d6d89451043c570b587169407f2f66cf",
     "semantic_hash": "d6d89451043c570b587169407f2f66cf"
   },
   "package.json": {
-    "mtime": 1794899672.3908727,
-    "seen": 1794899676.593626,
+    "mtime": 1794901500.4848554,
+    "seen": 1794901503.9002666,
     "ast_hash": "a33917fa4f2545d8e54e695e5b1eec5c",
     "semantic_hash": "a33917fa4f2545d8e54e695e5b1eec5c"
   },
   "public/envoi.php": {
-    "mtime": 1794899672.3919234,
-    "seen": 1794899676.5936465,
+    "mtime": 1794901500.4861102,
+    "seen": 1794901503.9002938,
     "ast_hash": "b9407700c721333891bad95f13297b17",
     "semantic_hash": "b9407700c721333891bad95f13297b17"
   },
   "src/assets/logo.json": {
-    "mtime": 1794899672.3931272,
-    "seen": 1794899676.59367,
+    "mtime": 1794901500.4876697,
+    "seen": 1794901503.9003556,
     "ast_hash": "a4249142ac1d324a9675f08739cb41da",
     "semantic_hash": "a4249142ac1d324a9675f08739cb41da",
     "ast_empty": true
   },
   "src/components/Arrow.astro": {
-    "mtime": 1794899672.3931272,
-    "seen": 1794899676.593671,
+    "mtime": 1794901500.4876697,
+    "seen": 1794901503.900358,
     "ast_hash": "7921307347f07f749dab79590752abbd",
     "semantic_hash": "7921307347f07f749dab79590752abbd"
   },
   "src/components/Articles.astro": {
-    "mtime": 1794899672.3932083,
-    "seen": 1794899676.5936973,
+    "mtime": 1794901500.4877782,
+    "seen": 1794901503.9003952,
     "ast_hash": "1ef204244cead2b9a596cef7f5fa089c",
     "semantic_hash": "1ef204244cead2b9a596cef7f5fa089c"
   },
   "src/components/CaseCard.astro": {
-    "mtime": 1794899672.3932083,
-    "seen": 1794899676.5937228,
+    "mtime": 1794901500.4877782,
+    "seen": 1794901503.9004278,
     "ast_hash": "ea8be2fffc2ecfc55a126aec4baa6401",
     "semantic_hash": "ea8be2fffc2ecfc55a126aec4baa6401"
   },
   "src/components/Cta.astro": {
-    "mtime": 1794899672.3932083,
-    "seen": 1794899676.5937476,
+    "mtime": 1794901500.4877782,
+    "seen": 1794901503.9004588,
     "ast_hash": "90809090cd3f3dac4c222dfbb425dd1f",
     "semantic_hash": "90809090cd3f3dac4c222dfbb425dd1f"
   },
   "src/components/Logo.astro": {
-    "mtime": 1794899672.3932083,
-    "seen": 1794899676.5937722,
+    "mtime": 1794901500.4877782,
+    "seen": 1794901503.9004896,
     "ast_hash": "0bea36b0c48327d3ed4bfe9848071cd0",
     "semantic_hash": "0bea36b0c48327d3ed4bfe9848071cd0"
   },
   "src/components/ServiceVolets.astro": {
-    "mtime": 1794899672.3932083,
-    "seen": 1794899676.5937965,
+    "mtime": 1794901500.4877782,
+    "seen": 1794901503.9005194,
     "ast_hash": "3366ea4704ab5f2d58d9214d622963a2",
     "semantic_hash": "3366ea4704ab5f2d58d9214d622963a2"
   },
   "src/components/Viz.astro": {
-    "mtime": 1794899672.3932083,
-    "seen": 1794899676.5938206,
+    "mtime": 1794901500.4877782,
+    "seen": 1794901503.9005494,
     "ast_hash": "9421284141bd5e99a796d2a2c5a4a7cd",
     "semantic_hash": "9421284141bd5e99a796d2a2c5a4a7cd"
   },
   "src/components/viz/Harness.astro": {
-    "mtime": 1794899672.3932083,
-    "seen": 1794899676.593845,
+    "mtime": 1794901500.4877782,
+    "seen": 1794901503.9005787,
     "ast_hash": "7a563785dfe1d33541c5b120b95e2317",
     "semantic_hash": "7a563785dfe1d33541c5b120b95e2317"
   },
   "src/components/viz/Infra.astro": {
-    "mtime": 1794899672.3934388,
-    "seen": 1794899676.5938725,
+    "mtime": 1794901500.488063,
+    "seen": 1794901503.9006138,
     "ast_hash": "73f44957f57559ac5552b8e5f98b8833",
     "semantic_hash": "73f44957f57559ac5552b8e5f98b8833"
   },
   "src/components/viz/MarketMap.astro": {
-    "mtime": 1794899672.3934388,
-    "seen": 1794899676.5939002,
+    "mtime": 1794901500.488063,
+    "seen": 1794901503.9006493,
     "ast_hash": "df9264b92f7f235bb96c2a0cea211dca",
     "semantic_hash": "df9264b92f7f235bb96c2a0cea211dca"
   },
   "src/components/viz/OpsBoard.astro": {
-    "mtime": 1794899672.3934388,
-    "seen": 1794899676.5939271,
+    "mtime": 1794901500.488063,
+    "seen": 1794901503.9006832,
     "ast_hash": "8be6fe0c687c6e0f9e4288db3ee843b1",
     "semantic_hash": "8be6fe0c687c6e0f9e4288db3ee843b1"
   },
   "src/components/viz/RagChat.astro": {
-    "mtime": 1794899672.3934388,
-    "seen": 1794899676.593954,
+    "mtime": 1794901500.488063,
+    "seen": 1794901503.9007163,
     "ast_hash": "4dc204eb90f8f2913b7fc36948d04373",
     "semantic_hash": "4dc204eb90f8f2913b7fc36948d04373"
   },
   "src/components/viz/Scorecard.astro": {
-    "mtime": 1794899672.3934388,
-    "seen": 1794899676.5939803,
+    "mtime": 1794901500.488063,
+    "seen": 1794901503.9007487,
     "ast_hash": "64465c82aea8265fc768a3d78946d996",
     "semantic_hash": "64465c82aea8265fc768a3d78946d996"
   },
   "src/content.config.ts": {
-    "mtime": 1794899672.3934388,
-    "seen": 1794899676.5940065,
+    "mtime": 1794901500.488063,
+    "seen": 1794901503.9007812,
     "ast_hash": "ce3c07baf8b74620edeabb8cae42453b",
     "semantic_hash": "ce3c07baf8b74620edeabb8cae42453b"
   },
   "src/layouts/Base.astro": {
-    "mtime": 1794899672.393922,
-    "seen": 1794899676.59403,
+    "mtime": 1794901500.4887564,
+    "seen": 1794901503.9008095,
     "ast_hash": "e597874581b8a6503669ad17f43cf323",
     "semantic_hash": "e597874581b8a6503669ad17f43cf323"
   },
   "src/layouts/CiblePage.astro": {
-    "mtime": 1794899672.394174,
-    "seen": 1794899676.5940552,
+    "mtime": 1794901500.4890804,
+    "seen": 1794901503.90084,
     "ast_hash": "6a86742b1e35b3387ba6c59b47b72519",
     "semantic_hash": "6a86742b1e35b3387ba6c59b47b72519"
   },
   "src/pages/404.astro": {
-    "mtime": 1794899672.394174,
-    "seen": 1794899676.59408,
+    "mtime": 1794901500.4890804,
+    "seen": 1794901503.9008708,
     "ast_hash": "9834c7a1a75e987f2d2e1e6d73f427ad",
     "semantic_hash": "9834c7a1a75e987f2d2e1e6d73f427ad"
   },
   "src/pages/a-propos.astro": {
-    "mtime": 1794899672.3942506,
-    "seen": 1794899676.5941055,
+    "mtime": 1794901500.4891837,
+    "seen": 1794901503.900901,
     "ast_hash": "5db19382eb7d78cc492b830562d057be",
     "semantic_hash": "5db19382eb7d78cc492b830562d057be"
   },
   "src/pages/adoption-ia.astro": {
-    "mtime": 1794899672.3942506,
-    "seen": 1794899676.5941298,
+    "mtime": 1794901500.4891837,
+    "seen": 1794901503.9009311,
     "ast_hash": "de7268b383cf33b358f3b53030d0fa16",
     "semantic_hash": "de7268b383cf33b358f3b53030d0fa16"
   },
   "src/pages/confidentialite.astro": {
-    "mtime": 1794899672.3942506,
-    "seen": 1794899676.5941544,
+    "mtime": 1794901500.4891837,
+    "seen": 1794901503.900961,
     "ast_hash": "bec6ff573fbbf92709bf2a6b153745e0",
     "semantic_hash": "bec6ff573fbbf92709bf2a6b153745e0"
   },
   "src/pages/contact.astro": {
-    "mtime": 1794899672.3942506,
-    "seen": 1794899676.5941787,
+    "mtime": 1794901500.4891837,
+    "seen": 1794901503.900991,
     "ast_hash": "b6967c3f1ff1196cf212edcc751716ce",
     "semantic_hash": "b6967c3f1ff1196cf212edcc751716ce"
   },
   "src/pages/entreprises-du-numerique.astro": {
-    "mtime": 1794899672.3942506,
-    "seen": 1794899676.594203,
+    "mtime": 1794901500.4891837,
+    "seen": 1794901503.9010217,
     "ast_hash": "d90a8bd2feaa56e680f860d13fe5d273",
     "semantic_hash": "d90a8bd2feaa56e680f860d13fe5d273"
   },
   "src/pages/index.astro": {
-    "mtime": 1794899672.3942506,
-    "seen": 1794899676.5942283,
+    "mtime": 1794901500.4891837,
+    "seen": 1794901503.9010527,
     "ast_hash": "93281fb2c47f98dd17ffa10e96fd8569",
     "semantic_hash": "93281fb2c47f98dd17ffa10e96fd8569"
   },
   "src/pages/investisseurs.astro": {
-    "mtime": 1794899672.3942506,
-    "seen": 1794899676.594253,
+    "mtime": 1794901500.4891837,
+    "seen": 1794901503.9010825,
     "ast_hash": "6067b4263e96c48ed41b9384b09b78ce",
     "semantic_hash": "6067b4263e96c48ed41b9384b09b78ce"
   },
   "src/pages/mentions-legales.astro": {
-    "mtime": 1794899672.3942506,
-    "seen": 1794899676.5942771,
+    "mtime": 1794901500.4891837,
+    "seen": 1794901503.9011123,
     "ast_hash": "014382adc02dc0a199538483d1bc806b",
     "semantic_hash": "014382adc02dc0a199538483d1bc806b"
   },
   "src/pages/merci.astro": {
-    "mtime": 1794899672.3942506,
-    "seen": 1794899676.5943234,
+    "mtime": 1794901500.4891837,
+    "seen": 1794901503.9011421,
     "ast_hash": "482dbcb980c6d0cc12be316e87f505e9",
     "semantic_hash": "482dbcb980c6d0cc12be316e87f505e9"
   },
   "src/scripts/site.ts": {
-    "mtime": 1794899672.3942506,
-    "seen": 1794899676.5943477,
+    "mtime": 1794901500.4891837,
+    "seen": 1794901503.9011712,
     "ast_hash": "bbad96feb9c4eec2871ca0522d914f9e",
     "semantic_hash": "bbad96feb9c4eec2871ca0522d914f9e"
   },
   "tsconfig.json": {
-    "mtime": 1794899672.3942506,
-    "seen": 1794899676.5943725,
+    "mtime": 1794901500.4891837,
+    "seen": 1794901503.9012012,
     "ast_hash": "9ae5fee979e8534fc19ee9e67d8ed2ab",
     "semantic_hash": "9ae5fee979e8534fc19ee9e67d8ed2ab"
   },
   ".github/workflows/graphify.yml": {
-    "mtime": 1794899672.3889408,
-    "seen": 1794899676.5935278,
+    "mtime": 1794901500.4823005,
+    "seen": 1794901503.900144,
     "ast_hash": "724c71e96142f404fdbca20c82dfa839",
     "semantic_hash": "724c71e96142f404fdbca20c82dfa839"
   }
