@@ -1,26 +1,32 @@
 {
   "communities": {
     "0": [
-      "src_assets_logo",
+      "astro_content",
+      "ref_astro_content",
       "src_components_arrow",
-      "src_components_cta",
-      "src_components_cta_props",
-      "src_components_logo",
-      "src_layouts_base",
-      "src_layouts_base_canonical",
-      "src_layouts_base_liens",
-      "src_layouts_base_organisation",
-      "src_layouts_base_props",
+      "src_components_articles",
+      "src_components_articles_articles",
+      "src_components_casecard",
+      "src_components_casecard_props",
+      "src_components_servicevolets",
+      "src_components_servicevolets_props",
+      "src_components_viz_infra",
+      "src_components_viz_opsboard",
+      "src_components_viz_ragchat",
+      "src_components_viz_ragchat_props",
       "src_layouts_ciblepage",
       "src_layouts_ciblepage_props",
-      "src_pages_404",
-      "src_pages_a_propos",
-      "src_pages_confidentialite",
-      "src_pages_contact",
-      "src_pages_contact_profils",
-      "src_pages_mentions_legales",
-      "src_pages_merci",
-      "src_styles_global"
+      "src_pages_adoption_ia",
+      "src_pages_adoption_ia_cas",
+      "src_pages_adoption_ia_services",
+      "src_pages_entreprises_du_numerique",
+      "src_pages_entreprises_du_numerique_cas",
+      "src_pages_entreprises_du_numerique_services",
+      "src_pages_index",
+      "src_pages_index_cas",
+      "src_pages_index_cibles",
+      "src_pages_investisseurs",
+      "src_pages_investisseurs_services"
     ],
     "1": [
       "astro_config",
@@ -44,6 +50,25 @@
       "ref_node_fs"
     ],
     "2": [
+      "src_assets_logo",
+      "src_components_cta",
+      "src_components_cta_props",
+      "src_components_logo",
+      "src_layouts_base",
+      "src_layouts_base_canonical",
+      "src_layouts_base_liens",
+      "src_layouts_base_organisation",
+      "src_layouts_base_props",
+      "src_pages_404",
+      "src_pages_a_propos",
+      "src_pages_confidentialite",
+      "src_pages_contact",
+      "src_pages_contact_profils",
+      "src_pages_mentions_legales",
+      "src_pages_merci",
+      "src_styles_global"
+    ],
+    "3": [
       "github_workflows_graphify",
       "github_workflows_graphify_jobs",
       "github_workflows_graphify_jobs_update_graph",
@@ -55,18 +80,6 @@
       "github_workflows_graphify_push_branches",
       "github_workflows_graphify_push_paths_ignore",
       "github_workflows_graphify_update_graph_runs_on"
-    ],
-    "3": [
-      "src_components_viz",
-      "src_components_viz_harness",
-      "src_components_viz_harness_lignes",
-      "src_components_viz_infra",
-      "src_components_viz_props",
-      "src_components_viz_ragchat",
-      "src_components_viz_ragchat_props",
-      "src_pages_adoption_ia",
-      "src_pages_adoption_ia_cas",
-      "src_pages_adoption_ia_services"
     ],
     "4": [
       "composer",
@@ -90,24 +103,16 @@
       "github_workflows_graphify_with_fetch_depth"
     ],
     "6": [
-      "ref_astro_content",
-      "src_components_articles",
-      "src_components_articles_articles",
-      "src_components_servicevolets",
-      "src_components_servicevolets_props",
-      "src_pages_investisseurs",
-      "src_pages_investisseurs_services"
-    ],
-    "7": [
+      "src_components_viz",
+      "src_components_viz_harness",
+      "src_components_viz_harness_lignes",
       "src_components_viz_marketmap",
       "src_components_viz_marketmap_segments",
+      "src_components_viz_props",
       "src_components_viz_scorecard",
-      "src_components_viz_scorecard_lignes",
-      "src_pages_index",
-      "src_pages_index_cas",
-      "src_pages_index_cibles"
+      "src_components_viz_scorecard_lignes"
     ],
-    "8": [
+    "7": [
       "phpmailer_phpmailer_exception",
       "phpmailer_phpmailer_phpmailer",
       "public_envoi",
@@ -115,15 +120,7 @@
       "public_envoi_field",
       "public_envoi_respond"
     ],
-    "9": [
-      "src_components_casecard",
-      "src_components_casecard_props",
-      "src_components_viz_opsboard",
-      "src_pages_entreprises_du_numerique",
-      "src_pages_entreprises_du_numerique_cas",
-      "src_pages_entreprises_du_numerique_services"
-    ],
-    "10": [
+    "8": [
       "src_content_config",
       "src_content_config_articles",
       "src_content_config_cas",
@@ -131,14 +128,14 @@
       "src_content_config_collections",
       "src_content_config_services"
     ],
-    "11": [
+    "9": [
       "ref_astro_tsconfigs_strict",
       "tsconfig",
       "tsconfig_exclude",
       "tsconfig_extends",
       "tsconfig_include"
     ],
-    "12": [
+    "10": [
       "src_scripts_site",
       "src_scripts_site_form",
       "src_scripts_site_menu",
@@ -147,19 +144,17 @@
     ]
   },
   "cohesion": {
-    "0": 0.11578947368421053,
+    "0": 0.15076923076923077,
     "1": 0.1286549707602339,
-    "2": 0.18181818181818182,
-    "3": 0.24444444444444444,
+    "2": 0.11764705882352941,
+    "3": 0.18181818181818182,
     "4": 0.2222222222222222,
     "5": 0.25,
-    "6": 0.38095238095238093,
-    "7": 0.2857142857142857,
+    "6": 0.25,
+    "7": 0.3333333333333333,
     "8": 0.3333333333333333,
-    "9": 0.3333333333333333,
-    "10": 0.3333333333333333,
-    "11": 0.4,
-    "12": 0.4
+    "9": 0.4,
+    "10": 0.4
   },
   "gods": [
     {
@@ -217,7 +212,7 @@
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `astro` connect `Community 1` to `Community 10`?",
+      "question": "Why does `astro` connect `Community 1` to `Community 8`?",
       "why": "High betweenness centrality (0.150) - this node is a cross-community bridge."
     },
     {
@@ -227,18 +222,18 @@
     },
     {
       "type": "low_cohesion",
-      "question": "Should `Community 0` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.11578947368421053 - nodes in this community are weakly interconnected."
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1286549707602339 - nodes in this community are weakly interconnected."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `steps` connect `Community 5` to `Community 2`?",
+      "question": "Why does `steps` connect `Community 5` to `Community 3`?",
       "why": "High betweenness centrality (0.014) - this node is a cross-community bridge."
     },
     {
       "type": "low_cohesion",
-      "question": "Should `Community 1` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.1286549707602339 - nodes in this community are weakly interconnected."
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected."
     }
   ]
 }
